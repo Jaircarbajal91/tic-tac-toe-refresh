@@ -29,12 +29,31 @@ class TTT {
   }
 
   static checkWin(grid) {
+    let horizontalWin = grid.reduce((winner, row) => {
+      if (row.every((el) => el === 'X')) winner = 'X';
+      if (row.every((el) => el === 'O')) winner = 'O';
+      return winner;
+    },'')
+    for (let i = 0; i < grid.length; i++) {
+      let verticleWin;
+      verticleWin = grid[i].reduce((winner, col) => {
+        if (col.every((el) => el === 'X')) winner = 'X';
+        if (col.every((el) => el === 'O')) winner = 'O';
+        return winner;
+      },'')
+      if (verticleWin) {
+        return verticleWin
+      }
+    }
 
     // Return 'X' if player X wins
     // Return 'O' if player O wins
     // Return 'T' if the game is a tie
     // Return false if the game has not ended
-
+    if (horizontalWin) {
+      return horizontalWin;
+    }
+    return false;
   }
 
   static endGame(winner) {
