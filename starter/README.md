@@ -69,11 +69,11 @@ modify this class at all. The functionality you will need is documented below.
 
 ### Updating the grid
 
-* `Screen.setGrid(row, col, char)` sets the character at `row` and `col` to
+* `` sets the character at `row` and `col` to
   the given `char`.
-* `Screen.setTextColor(row, col, color)` sets the text color at `row` and
+* `` sets the text color at `row` and
   `col` to the given `color`.
-* `Screen.setBackgroundColor(row, col, color)` sets the background color at
+* `` sets the background color at
   `row` and `col` to the given `color`.
 
 Valid colors are:
